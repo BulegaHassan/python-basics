@@ -57,5 +57,48 @@ import random
 print(random.randrange(1,20))
 
 # Casting
+castedInt1 = int(1)
+castedInt2 = int(2.8)
+castedInt3 = int('3')
+castedFloat1 = float(1)
+castedFloat2 = float(2.8)
+castedFloat3 = float('3')
+castedstring1 = str('s1')
+castedstring2 = str(1)
+castedstring3 = str(1.123)
+print(castedInt2,castedFloat3,castedstring3)
 
+# Strings => 'string' is the same as "string"
+print("He's called 'Hassan'")
+print('He\'s called "Hassan"')
+multilineString = """Demand is desire backed up by ability
+to pay for goods in a specified period
+"""
+print(multilineString)
+# strings are arrays
+print(multilineString[3])
+
+# loop thru string
+for x in 'posh':
+    print( x)
+# length of a string
+print(len(multilineString))
+# check a string
+txt = 'this msg is 4 you'
+print('you' in txt) # gives a boolean accordingly
+print('you' not in txt) # gives a boolean accordingly
+# slicing strings
+string1 = 'subah wanagsaan'
+print(string1[3:8])
+print(string1[:5]) # slice from start to pos 5
+print(string1[6:]) # slice from pos 6 to the end
+print(string1[-2]) # negative slicing starts from the end of the string
+# modify strings
+string1 = ' subah wanagsaan '
+print(string1.upper())
+print(string1.lower())
+print(string1.strip()) # removes whitespace from start and end
+print(string1.replace('u', 'a'))
+print(string1.split(' ')) # splits the string into substrings if it finds instances of a separator
+# string concatenation
 
