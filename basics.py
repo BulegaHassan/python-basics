@@ -1,7 +1,14 @@
 # order of execution
 print('line1')
 print('line2')
-print('line3')
+print('line3') 
+
+# # pythogaros theorem
+# adjacent = int(input('Please enter a value: '))
+# opposite = int(input('Please enter a value: '))
+# hypotenuse = (pow(adjacent,2) + pow(opposite,2)) ** (1/2)
+# print('The hypotenuse is: ', hypotenuse)
+
 
 # Python indentation 
 if 5 > 2:
@@ -70,7 +77,7 @@ print(castedInt2,castedFloat3,castedstring3)
 
 # Strings => 'string' is the same as "string"
 print("He's called 'Hassan'")
-print('He\'s called "Hassan"')
+print('He\'s called "Hassan"') #escape character added \'
 multilineString = """Demand is desire backed up by ability
 to pay for goods in a specified period
 """
@@ -100,5 +107,49 @@ print(string1.lower())
 print(string1.strip()) # removes whitespace from start and end
 print(string1.replace('u', 'a'))
 print(string1.split(' ')) # splits the string into substrings if it finds instances of a separator
-# string concatenation
+# string concatenation 
+string2 = 'Students'
+print(string1 + string2)
+#format strings
+price = 59
+txt = f"The price is {price} dollars" #use f-string a a placeholder
+print(txt)
 
+# Booleans => represent one of two values: True or False.
+print(10 > 9)
+print(10 == 9)
+print(10 < 9)
+# The following will return False:
+bool(False)
+bool(None)
+bool(0)
+bool("")
+bool(())
+bool([])
+bool({})
+# The rest return true e.g
+bool("abc")
+bool(123)
+bool(["apple", "cherry", "banana"])
+
+   # operators
+# +	Addition	x + y	
+# -	Subtraction	x - y	
+# *	Multiplication	x * y	
+# /	Division	x / y	
+# %	Modulus	x % y	
+# **	Exponentiation	x ** y	
+# //	Floor division	x // y
+# x -= 3	x = x - 3	
+# x *= 3	x = x * 3
+#comparison operators
+# Equal	x == y	
+# !=	Not equal	x != y	
+# >	Greater than	x > y	
+# <	Less than	x < y	
+# >=	Greater than or equal to	x >= y	
+# <=	Less than or equal to	x <= y
+#logical operators 
+# and 	Returns True if both statements are true	x < 5 and  x < 10	
+# or	Returns True if one of the statements is true	x < 5 or x < 4	
+# not	Reverse the result, returns False if the result is true	not(x < 5 and x < 10)
