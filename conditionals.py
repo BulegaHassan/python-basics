@@ -39,3 +39,34 @@ else:
 # pass statement - an if statement cannot be empty, if for some reason then use a pass statement to avoid error
 if x > 0:
   pass
+
+# while loops 
+print('--------------')
+print('while loops')
+print('-------------')
+# With the while loop we can execute a set of statements as long as a condition is true.
+i = 0
+while i <= 5:
+  print(i) 
+  i += 1
+
+print('-----------') 
+
+# break statement - stops the loop even when the condition is true
+i = 1
+while i <= 5:
+  print(i) 
+  if i == 3:
+    break
+  i += 1
+
+print('-----------') 
+
+# continue statement - we can stop the current iteration, and continue with the next
+i = 0
+while i < 6:
+  i += 1
+  if i == 3:
+    continue
+  print(i)
+  
