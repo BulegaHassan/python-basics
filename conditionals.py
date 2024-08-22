@@ -50,7 +50,7 @@ while i <= 5:
   print(i) 
   i += 1
 
-print('-----------') 
+print('----') 
 
 # break statement - stops the loop even when the condition is true
 i = 1
@@ -60,7 +60,7 @@ while i <= 5:
     break
   i += 1
 
-print('-----------') 
+print('----') 
 
 # continue statement - we can stop the current iteration, and continue with the next
 i = 0
@@ -69,4 +69,66 @@ while i < 6:
   if i == 3:
     continue
   print(i)
+
+# for loops 
+print('--------------')
+print('for loops')
+print('-------------')
+#  A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
+fruits = ["apple", "banana", "cherry"]
+fruits.append("dates") 
+for x in fruits:
+  print(x)
+
+print('--------------')
+
+# break statement - we can stop the loop before it has looped through all the items
+for y in fruits:
+  print(y)
+  if y == 'banana':
+    break
   
+print('--------------')
+  
+for x in fruits:
+  if x == "banana":
+    break
+  print(x)
+
+print('--------------')
+
+#  the continue statement -  we can stop the current iteration of the loop, and continue with the next:
+for x in fruits:
+  if x == 'banana':
+    continue
+  print(x)
+
+print('--------------')
+
+#    The range() Function
+for x in range(6):
+  print(x)
+
+print('--------------')
+
+for x in range(2, 30, 3): # starts with 2 up to 30(not inclusive) in steps of 3
+  print(x)
+
+print('--------------')
+
+#  The else keyword in a for loop specifies a block of code to be executed when the loop is finished:
+for x in range(2,6):
+  print(x)
+else:
+  print("Finally finished!")
+
+print('--------------')
+
+# Nested Loops - The "inner loop" will be executed one time for each iteration of the "outer loop"
+for x in range(7):
+  for y in range(5,66,5):
+    print(x,y)
+
+# for loops cannot be empty, but if you for some reason have a for loop with no content, put in the pass statement to avoid getting an error.
+for p in {1,2,3}:
+ pass
