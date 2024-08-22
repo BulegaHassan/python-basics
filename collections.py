@@ -173,3 +173,54 @@ print(set3)
 set3 = set1.difference(set2)
 
 print(set3)
+
+print('-----------')
+print('DICTIONARIES')
+print('-----------')
+# Dictionaries are used to store data values in key:value pairs.  They're ordered*, changeable and do not allow duplicates.
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964,
+  "country" : "USA"
+}
+thisdict['colors'] = ["red", "white", "blue"] # add items
+print(thisdict, thisdict["brand"], len(thisdict), type(thisdict))
+mydict = dict(name = "John", age = 36, country = "Norway") # using a dict constructor
+# access dict members
+member = thisdict.get('model') 
+print(member,thisdict.keys(),thisdict.values()) # get keys, values 
+# The items() method will return each item in a dictionary, as tuples in a list.
+print(thisdict.items())
+#  update dict
+thisdict.update({"year": 2020}) # or use => thisdict["year"] = 2018
+print(thisdict)
+#  remove items
+thisdict.pop("model") 
+del thisdict["country"] # del thisdict, deletes the entire dictionary
+thisdict.popitem() # removes last inserted item
+mydict.clear()
+# Loop through a dictionary
+for x in thisdict: # you can use thisdict.keys/values/items to get what you want.
+  print(x)
+
+# copy dict
+ourdict = thisdict.copy()
+print(ourdict)
+#  nested dicts
+hisfamily = {
+  "child1" : {
+    "name" : "Emil",
+    "year" : 2004
+  },
+  "child2" : {
+    "name" : "Tobias",
+    "year" : 2007
+  },
+  "child3" : {
+    "name" : "Linus",
+    "year" : 2011
+  }
+}
+print(hisfamily)
+print(hisfamily["child2"]["name"])
