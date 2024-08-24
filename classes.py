@@ -28,3 +28,46 @@ b1.age = 19
 print('She is ' + b1.color + " " +  b1.name + " at ", b1.age)
 
 del b1.color # delete property or del b1 - which deletes the object
+
+# Python Inheritance
+class Person: # Parent class created like any other class
+    def __init__(self,fname,lname):
+        self.firstname = fname
+        self.lastname = lname
+    
+    def printname(self):
+        print(self.firstname, self.lastname)
+
+p2 = Person('Wamala','Abubakar')
+p2.printname()
+class Student(Person): # child class created by passing parent as a parameter
+    pass
+s1 = Student('Muhsin','Muusaa')
+s1.printname()
+
+class Student(Person):
+  def __init__(self, fname, lname): # When you add the __init__() func, the child class will nolonger inherit the parent's __init__() function.
+      print('child nolonger inherits from parent')
+
+# To keep the inheritance of the parent's __init__() function, add a call to the parent's __init__() function:
+class Student(Person):
+  def __init__(self, fname, lname):
+    Person.__init__(self, fname, lname)
+
+# Python also has a super() function that will make the child class inherit all the methods and properties from its parent:
+
+class Student(Person):
+  def __init__(self, fname, lname):
+    super().__init__(fname, lname)
+
+# Add properties and methods to the child class
+class Student(Person):
+  def __init__(self, fname, lname, year):
+    super().__init__(fname, lname)
+    self.graduationyear = year
+
+  def welcome(self):
+    print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)
+
+s3 = Student('Kayemba','Rayan',2031)
+s3.welcome()
