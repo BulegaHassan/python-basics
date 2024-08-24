@@ -52,7 +52,20 @@ def my_function(*, x):
   print(x)
 
 my_function(x = 3) # my_function(3) - throws an error
-
+print("-----------")
 # RECURSION
 
+# LAMBDA FUNCTIONS - A lambda function is a small anonymous function. It  can take any number of arguments, but can only have one expression.
+x = lambda a : a + 11
+print(x(10))
+x = lambda a, b : a ** b
+print(x(2,3))
+# The power of lambda is better shown when you use them as an anonymous function inside another function.
+def myfunc(n):
+  return lambda a : a * n
 
+mydoubler = myfunc(2)
+mytripler = myfunc(3)
+
+print(mydoubler(11))
+print(mytripler(11))
