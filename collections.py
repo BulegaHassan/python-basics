@@ -2,7 +2,7 @@
 print('-----------')
 print('LISTS')
 print('-----------')
-#LISTS - are created using square brackets
+#LISTS - are created using square brackets - Python does not have built-in support for Arrays, but Python Lists can be used instead.
 #  List items are indexed, ordered, changeable, and allow duplicate values. 
 thislist = ["apple", "banana", "cherry"]
 print(thislist,'has length of ',len(thislist), ' of type ', type(thislist))
