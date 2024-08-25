@@ -30,6 +30,7 @@ print('She is ' + b1.color + " " +  b1.name + " at ", b1.age)
 del b1.color # delete property or del b1 - which deletes the object
 
 # Python Inheritance
+print('Inheritance\n -------------')
 class Person: # Parent class created like any other class
     def __init__(self,fname,lname):
         self.firstname = fname
@@ -71,3 +72,67 @@ class Student(Person):
 
 s3 = Student('Kayemba','Rayan',2031)
 s3.welcome()
+print('Polymorphism\n -------------')
+# Polymorphism - refers to methods/functions with the same name that can be executed on many objects or classes.
+#  Function polymorphism e.g the len() function which can be used to find length of a list,string,tuple and dictionary
+
+# Class polymorphism - example, three classes Car,Plane,Boat can have a method move()
+class Car:
+   def __init__(self,brand,model):
+      self.brand = brand
+      self.model = model
+
+   def move(self):
+      print('Drive')
+      
+class Boat:
+   def __init__(self,brand,model):
+      self.brand = brand
+      self.model = model
+
+   def move(self):
+      print('Sail')
+
+class Plane:
+   def __init__(self,brand,model):
+      self.brand = brand
+      self.model = model
+
+   def move(self):
+      print('Fly')
+
+car1 = Car('Ford','Mustang')
+boat1 = Boat('Lyato','Pya')
+plane1 = Plane('Endeege','Kapyaata')
+
+for x in (car1,boat1,plane1):
+   x.move()
+# Inheritance class plymorphism
+class Vehicle:
+  def __init__(self, brand, model):
+    self.brand = brand
+    self.model = model
+
+  def move(self):
+    print("Move!")
+
+class Car(Vehicle): # inherits vehicle class properties and method
+  pass
+# Boat and plane inherit brand,model and move() from vehicle but override the move()
+class Boat(Vehicle):
+  def move(self):
+    print("Sail!")
+
+class Plane(Vehicle):
+  def move(self):
+    print("Fly!")
+
+car1 = Car("Ford", "Mustang") #Create a Car object
+boat1 = Boat("Ibiza", "Touring 20") #Create a Boat object
+plane1 = Plane("Boeing", "747") #Create a Plane object
+
+for x in (car1,boat1,plane1):
+   print(x.brand)
+   print(x.model)
+   x.move()
+   
