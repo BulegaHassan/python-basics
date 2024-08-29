@@ -3,12 +3,6 @@ print('line1')
 print('line2')
 print('line3') 
 
-# # pythogaros theorem
-# adjacent = int(input('Please enter a value: '))
-# opposite = int(input('Please enter a value: '))
-# hypotenuse = (pow(adjacent,2) + pow(opposite,2)) ** (1/2)
-# print('The hypotenuse is: ', hypotenuse)
-
 
 # Python indentation 
 if 5 > 2:
@@ -153,3 +147,13 @@ bool(["apple", "cherry", "banana"])
 # and 	Returns True if both statements are true	x < 5 and  x < 10	
 # or	Returns True if one of the statements is true	x < 5 or x < 4	
 # not	Reverse the result, returns False if the result is true	not(x < 5 and x < 10)
+
+import math
+
+ # python input - pythogaros theorem
+adjacent = int(input('Please enter a value: '))
+opposite = int(input('Please enter a value: '))
+hypotenuse = (adjacent**2 + opposite**2) ** (1/2)
+hypotenuse_optionally = math.sqrt(pow(adjacent,2) + pow(opposite,2))
+print('The hypotenuse is got twice : ', hypotenuse,hypotenuse_optionally)
+
