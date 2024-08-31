@@ -21,5 +21,34 @@ except:
   print('Something  wrong happened')
 else:
   print('Nothing wrong happened')
-  
+# finally block
+print('--------\n')
+try:
+  print(x) # x is not defined
+except:
+  print('Something  wrong happened')
+finally:
+  print('the "try except" is finished')
+print('--------\n')
+#  try opening a non existing file
+try:
+  f = open('demofile.txt')
+  try:
+    f.write('lorem ipsum')
+  except:
+    print('Something  wrong happened when writing to the file')
+  finally: 
+    f.close()
+except:
+  print('Something  went wrong when opening the file')
+
+print('--------\n')
+
+
+#  You can thow an exception using the raise keyword
+x = -1 
+if x < 0:
+  raise Exception('sorry, negative numbers not allowed')
+
+
   
