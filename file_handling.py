@@ -42,3 +42,18 @@ f3.close()
 # open and read file after overwriting
 f3 = open('demofile3.txt','r')
 print(f3.read())
+
+print('\n----------------\n')
+# Create a new file
+f4 = open('newtxtfile.txt','x') # 'a' amd 'w'\can also be used if file doesn't exist
+
+# delete a file
+import os
+# os.remove("newtxtfile.txt2")
+
+# check if file exists before deleting
+if os.path.exists('newtxtfile.txt'):
+    os.remove('newtxtfile.txt')
+else:
+    print('File DNE')
+# os.rmdir('empty_folder') deletes folder
